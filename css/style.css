@@ -1,0 +1,116 @@
+body {
+  background: #272727;
+
+}
+
+p {
+  font-family: 'Muli', sans-serif;
+  color: #ba3638;
+}
+
+span {
+ font-family: 'Muli', sans-serif;
+ color: gray;
+}
+
+
+
+/* I'm using Ubuntu Condensed font
+/* instead of the original shot font,
+/* I think Ubuntu font is a better fit,
+/* What do you think? 
+/* **************************** */
+
+* {box-sizing:border-box}
+html,body {height:100%;}
+
+.paper {
+  width:430px;
+  height:102px;
+  border-radius:4px;
+  box-shadow: 0 5px 25px rgba(0,0,0,.15);
+/*  position:absolute;
+  top:150px;
+  right:50%*/
+}
+
+.box {width:100%;height:100%;overflow:hidden;border-radius:4px}
+
+.bar {
+  height:80px;
+  background: #f7ffce;
+  background:linear-gradient(135deg,#f7ffce,#e2e4b8);
+  border-radius:4px 4px 0 0;
+  color:#af9a50;
+  padding:20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,.3);
+  position:relative;
+  z-index:5
+}
+
+.item {
+  height:100px;
+  padding:18px;
+  box-shadow: 0 4px 5px rgba(0,0,0,.3);
+  position:relative;
+  font-size:21px;
+  -webkit-transition:all 200ms ease;
+  transition:all 200ms ease;
+}
+
+.item>.box>p {
+  line-height:60px;
+  -webkit-transition:all 200ms ease;
+  transition:all 200ms ease;
+}
+
+.coffee p {
+  margin-bottom: 0;
+}
+
+.coffee span {
+  font-size: 14px;
+}
+
+
+.item.coffee {
+  background: #ffe26f;
+  background:linear-gradient(135deg,#fff,#fff);
+  z-index:4;
+  color:#e07556; 
+}
+.item.coffee .detail .counter div {background: #FFF2BE}
+
+
+
+.item-icon {  
+  /*background:url(https://image.ibb.co/b6zDSF/items_icons_t.png) no-repeat top left;*/
+  border-radius: 60%;
+  border: 5px solid #ba3638;
+  width:78px;
+  height: 70px;
+
+  float:left;
+  margin-right:10px;
+  -webkit-transition:all 200ms ease;
+  transition:all 200ms ease;
+  -webkit-transform: translateZ(0);-moz-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);
+}
+
+.item-icon.coffee {background-position:0 0}
+.item-icon.sweet {background-position:-70px 0}
+.item-icon.food {background-position:-137px 0}
+.item-icon.drink {background-position:-208px 0}
+
+/** Active **/
+
+/** Extra For Previewing **/
+
+.paper.preview-1 {
+  margin-right:20px;
+}
+.paper.preview-2 {
+  margin-right:-300px;
+}
+/** making some things unselectable **/
+
