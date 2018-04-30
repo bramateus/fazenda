@@ -13,11 +13,27 @@ $.ajax({
     success: function(data)
     {
 
+
+
+
     	for (var i = 0; i < data.data.length; i++) {
 
     		var conteudoJSON = data.data[i];
     		console.log(conteudoJSON);
-    		
+
+
+
+            var positivos = data.data[i].positive;
+    		var negativos = data.data[i].negative;
+            
+            var votoPositivo = parseInt(positivos);
+            var votoNegativo = parseInt(negativos);
+            console.log("" + votoPositivo);
+            console.log("" + votoNegativo);
+            console.log("" + typeof votoPositivo);
+            console.log("" + typeof votoNegativo);
+
+
     		content+= '<div style="margin:0 auto;" class="paper preview-1">\
     						<div class="box">\
 					        	<div class="item coffee">\
@@ -28,7 +44,10 @@ $.ajax({
 					              	<span>'+conteudoJSON.description+'</span>\
 							    </div>\
 							</div>\
-						</div> ';
+						</div> \
+\           <h1 style="color:red">'+conteudoJSON.positive+'</h1>\
+   \
+                       ';
 
 
 
@@ -46,6 +65,9 @@ $.ajax({
     		 // $("#divPrincipal").append('<p class="text-success"> .+ conteudoJSON +. </p>');
     		
     	}
+
+
+
 
     	// $('#').html(content);
     	$('#content').html(content);
